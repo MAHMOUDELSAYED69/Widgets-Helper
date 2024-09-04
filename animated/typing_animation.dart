@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:formatted_text/formatted_text.dart';
-import 'package:qubic_ai/core/utils/extentions/extentions.dart';
+//TODO:  Import extensions if they exist
+// import '../../core/utils/extentions/extentions.dart';
 
 class TypewriterAnimatedText extends StatefulWidget {
   final String text;
@@ -41,7 +42,7 @@ class _TypewriterAnimatedTextState extends State<TypewriterAnimatedText>
       vsync: this,
     )..forward().then((_) {
         if (widget.onComplete != null) {
-          widget.onComplete!(); // Call the callback when typing is complete
+          widget.onComplete!();
         }
       });
 
